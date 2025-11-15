@@ -17,7 +17,7 @@ function Pokedex() {
 
     return (
         <>
-        <h1>Pokedex</h1>
+        <h1 className='title'>Pokedex</h1>
         <div className='top-container'>
                    <div className="dex-container">
             <div className="dex-container-inside">
