@@ -1,42 +1,484 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import "tailwindcss";
+
+.navbar {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar-links {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-links:hover {
+  background-color: rgba(0, 110, 255, 0.305);
+  transition: .5s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.poke-card {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  height: 200px;
+  justify-self: center;
+}
+
+.poke-img {
+  margin: 20px;
+  justify-self: center;
+}
+
+.top-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dex-container {
+  justify-self: center;
+  border: 15px solid black;
+  background-color: black;
+  width: 500px;
+  height: 700px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+  box-shadow: 5px 5px 15px -3px #000000;
+}
+
+.dex-container-inside {
+  background-color: red;
+  width: 475px;
+  height: 670px;
+  justify-self: center;
+  border: 1px solid black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.top-lights-container {
+  display: flex;
+  /* border: 1px solid red; */
+  width: 265px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.big-light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: 5px solid rgb(167, 167, 167);
+  -webkit-box-shadow: 0px 0px 20px 2px #000000; 
+  box-shadow: 0px 0px 10px 2px #40e3f5;
+  background-image: radial-gradient(circle, rgb(173, 221, 222), rgba(0, 224, 254, 0.967), rgba(0, 203, 254, 0.956));
+}
+
+.three-lights-container {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid green; */
+  width: 60px;
+  height: 25px;
+}
+
+.small-lights{
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+
+.red-light {
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(255, 33, 33), rgb(255, 0, 0));
+}
+.green-light {
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(145, 247, 143), rgb(0, 255, 17));
+}
+.yellow-light {
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(255, 233, 33), rgb(255, 204, 0));
+}
+
+.bottom-container {
+  border: 8px solid black;
+  border-top: none;
+  border-left: none;
+  width: 280px;
+  height: 50px;
+  transform: skew(120deg);
+  margin-left: 30px;
+  margin-top: -40px;
+  
+}
+
+.right-box {
+  width: 128px;
+  height: 50px;
+  border: 5px solid black;
+  float: right;
+  margin-top: -85px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  
+}
+
+.screen-container {
+  margin-left: -30px;
+  margin-top: 30px;
+  width: 400px;
+  height: 270px;
+  border: 4px solid black;
+  justify-self: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(188, 188, 188);
+  -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+  box-shadow: 5px 5px 15px -3px #000000;
+}
+
+.top-vents-container {
+  display: flex;
+  
+  margin-top: 5px;
+}
+.vents-container {
+  display: flex-column;
+}
+
+.vents {
+  width: 80px;
+  height: 5px;
+  background-color: black;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.red-button {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50px;
+  margin-left: 70px;
+  margin-right: 150px;
+  border: 2px solid black;
+}
+
+.bottom-controls-container {
+  width: 400px;
+  height: 200px;
+  /* border: 1px solid black; */
+  justify-self: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btns {
+    display: flex;
+    margin-top: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .black-btn {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50px;
+    background-image: radial-gradient(circle, rgb(81, 81, 81), rgb(50, 50, 50), rgb(0, 0, 0));
+
   }
+
+  .slender-btn {
+    width: 50px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50px;
+    margin: 10px;
+    margin-top: 25px;
+    border: 3px solid black;
+  }
+
+  .screen-small {
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-self: right;
+    background-color: rgb(108, 162, 108);
+  }
+
+  .pokemon-id {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+  }
+
+.d-pad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 30px); /* Adjust size as needed */
+  grid-template-rows: repeat(3, 30px); /* Adjust size as needed */
+  gap: 2px; /* Small gap between buttons */
+  width: fit-content; /* Container adjusts to content size */
+  margin: 1px; /* Example margin */
+  margin-top: 20px;
+  margin-left: 70px;
+  border-radius: 5px; /* Slightly rounded corners */
+  
 }
 
-.card {
-  padding: 2em;
+.d-pad-button {
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+  -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+  box-shadow: 5px 5px 15px -3px #000000;
+}
+/* 
+.d-pad-button:hover {
+  background-color: #ccc;
+} */
+
+/* Positioning the buttons within the grid */
+.up {
+  grid-column: 2;
+  grid-row: 1;
 }
 
-.read-the-docs {
-  color: #888;
+.left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.center {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: black; /* Distinct color for center */
+}
+
+.right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Optional: Add icons or text for direction */
+.up::before { content: '▲'; }
+.down::before { content: '▼'; }
+.left::before { content: '◀'; }
+.right::before { content: '▶'; }
+
+/* Right side */
+.right-side-pokedex-container {
+  margin-left: -5px;
+  margin-top: 100px;
+  justify-self: center;
+  border: 15px solid black;
+  background-color: black;
+  width: 450px;
+  height: 600px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  /* border-top-left-radius: 30px; */
+  -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+  box-shadow: 5px 5px 15px -3px #000000;
+
+}
+
+.left-column {
+  margin-left: -50px;
+  margin-top: 100px;
+  height: 600px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 10px;;
+  background: #FF0101;
+}
+
+.column-box-1 {
+  margin-top: 30px;
+  height: 20px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.column-box-2 {
+  margin-top: 480px;
+  height: 20px;
+   border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+
+.right-container-inside {
+  padding: 40px;
+  background-color: red;
+  width: 430px;
+  height: 540px;
+  margin-left: -15px;
+  justify-self: center;
+  border-bottom-right-radius: 20px;
+
+}
+
+.slant-container {
+  width: 100px;
+  height: 55px;
+  border-top: 5px solid black;
+  border-left: none;
+  transform: skew(-125deg);
+  margin-left: 90px;
+  margin-top: -14px;
+  background-color: red;
+  border-bottom: none;
+  justify-self: center;
+}
+
+.outer-slant {
+  height: 45px;
+  width: 80px;
+  background-color: red;
+  margin-left: -12px;
+  
+}
+
+.info-screen {
+  width: 350px;
+  height: 150px;
+  border: 2px solid black;
+  background-color: rgb(106, 195, 125);
+  border-radius: 10px;
+  justify-self: center;
+  overflow: auto;
+  scrollbar-width:none;
+}
+
+.info-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.info-text-container {
+  margin: 20px;
+  display: flex-column;
+}
+
+
+.blue-btns-container {
+  margin-top: 10px;
+  justify-self: center;
+  text-align: center;
+}
+
+.blue-btns {
+width: 60px;
+height: 40px;
+border: 2px solid black;
+border-radius: 5px;
+background-color: rgb(48, 48, 228);
+margin: 1px;
+cursor: pointer;
+}
+
+.small-btns-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.sm-round-button{
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.d-pad-container-right {
+  display: grid;
+  grid-template-columns: repeat(3, 30px); /* Adjust size as needed */
+  grid-template-rows: repeat(3, 30px); /* Adjust size as needed */
+  gap: 17px; /* Small gap between buttons */
+  width: fit-content; /* Container adjusts to content size */
+  margin: 1px; /* Example margin */
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px; /* Slightly rounded corners */
+  
+}
+
+.d-pad-button-grey {
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+  background-color: grey;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.left-grey::before { content: '◀'; color: rgb(142, 0, 0)}
+.right-grey::before { content: '▶'; color: rgb(142, 0, 0) }
+
+.round-yellow-btn {
+  margin-top: 15px;
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: yellow;
+}
+
+.btn-container-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.triangle {
+  margin-top: -6px;
+  margin-left: 2px;
+  font-size: 28px;
+  color: rgb(142, 0, 0);
+  cursor: pointer;
 }
