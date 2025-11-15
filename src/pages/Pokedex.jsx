@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PokemonCard from './PokemonCard';
+import PokemonCard from '../components/PokemonCard';
 import InfoScreen from '../components/InfoScreen';
 
 

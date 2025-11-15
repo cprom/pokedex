@@ -1,10 +1,19 @@
-import './App.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
+import './App.css'
+import Pokedex from './pages/Pokedex'
+
+
+
+const queryClient = new QueryClient();
 function App() {
 
   return (
     <>
-      <h1>Pokedex</h1>
+    <QueryClientProvider client={queryClient}>
+
+      <Pokedex/>
+    </QueryClientProvider>
     </>
   )
 }
