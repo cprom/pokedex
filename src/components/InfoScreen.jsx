@@ -30,7 +30,7 @@ function InfoScreen({pokemonId}) {
     return (
         <>
         <div className='info-screen'>
-            {<h1 className='font-bold text-xl text-center '>{data?.name.charAt(0).toUpperCase()+ data.name.slice(1)}</h1>}
+            {<h1 className='info-text' style={{fontSize: 25}}>{data?.name.charAt(0).toUpperCase()+ data.name.slice(1)}</h1>}
             <div className='info-text-container'>
                 <div>
                     <h3 className='info-text'>Abilities:</h3>
@@ -41,8 +41,8 @@ function InfoScreen({pokemonId}) {
                     </div>
                 </div>
                 <div >
-                    <h3 className='info-text'>height: </h3><p>{data?.height}</p>
-                    <h3 className='info-text'> weight:</h3><p>{data?.weight}</p>
+                    <h3 className='info-text'>Height: </h3><p>{data?.height}</p>
+                    <h3 className='info-text'>Weight:</h3><p>{data?.weight}</p>
                 </div>
             </div>
         </div>
@@ -74,6 +74,10 @@ function InfoScreen({pokemonId}) {
                     <div className="d-pad-button-grey right-grey" ></div>
             </div>
                 <div className='round-yellow-btn'><p className='triangle'>◀</p></div>
+        </div>
+        <div className='black-btns-container'>
+            <button className='black-btn-br'>1</button>
+            <button className='black-btn-br'>2</button>
         </div>
         </>
     )

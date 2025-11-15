@@ -50,12 +50,9 @@ const PokemonCard = ({pokemonId}) => {
 
   return (
     <>
-
-      <div className='poke-card mt-5 bg-white'>
-    { <img src={data?.sprites.other.showdown.front_default} className='poke-img'/>}
-    </div>
-
-
+        <div className='poke-card'>
+        {<img src={data?.sprites.other.showdown.front_default} className='poke-img'/>}
+        </div>
     </>
   )
     

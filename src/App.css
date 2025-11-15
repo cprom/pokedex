@@ -27,17 +27,20 @@ a {
 }
 
 .poke-card {
+  margin-top: 10px;
   border: 5px solid black;
   border-radius: 10px;
   width: 320px;
   text-align: center;
   height: 200px;
   justify-self: center;
+  background-color: rgb(106, 195, 125);
 }
 
 .poke-img {
   margin: 20px;
   justify-self: center;
+  transform: scale(1.5);
 }
 
 .top-container {
@@ -383,11 +386,13 @@ a {
   justify-self: center;
   overflow: auto;
   scrollbar-width:none;
+  text-align: center;
 }
 
 .info-text {
-  font-weight: bold;
-  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 20px;
 }
 
 .info-text-container {
@@ -457,8 +462,8 @@ cursor: pointer;
   transition: background-color 0.2s ease; /* Smooth hover effect */
 }
 
-.left-grey::before { content: '◀'; color: rgb(142, 0, 0)}
-.right-grey::before { content: '▶'; color: rgb(142, 0, 0) }
+.left-grey::before { content: '◀'; color: rgb(142, 0, 0); margin-bottom: 5px}
+.right-grey::before { content: '▶'; color: rgb(142, 0, 0); margin-bottom: 5px }
 
 .round-yellow-btn {
   margin-top: 15px;
@@ -473,12 +478,25 @@ cursor: pointer;
 .btn-container-3 {
   display: flex;
   justify-content: space-between;
+  height: 70px;
 }
 
 .triangle {
   margin-top: -6px;
-  margin-left: 2px;
+  margin-left: 4px;
   font-size: 28px;
   color: rgb(142, 0, 0);
   cursor: pointer;
+}
+
+.black-btns-container {
+  display: flex;
+}
+
+.black-btn-br {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 5px;
 }
