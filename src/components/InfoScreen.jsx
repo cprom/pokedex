@@ -27,6 +27,12 @@ function InfoScreen({pokemonId}) {
   if (error) return 'An error has occurred: ' + error.message
 
 
+  function playCry() {
+    const cry = new Audio(data.cries.latest);
+    cry.play();
+  }
+
+
     return (
         <>
         <div className='info-screen'>
@@ -73,7 +79,7 @@ function InfoScreen({pokemonId}) {
                     <div className="d-pad-button-grey left-grey" ></ div>
                     <div className="d-pad-button-grey right-grey" ></div>
             </div>
-                <div className='round-yellow-btn'><p className='triangle'>◀</p></div>
+                <button className='round-yellow-btn' onClick={playCry}><p className='triangle'>◀</p></button>
         </div>
         <div className='black-btns-container'>
             <button className='black-btn-br'>1</button>
