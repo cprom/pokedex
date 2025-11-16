@@ -72,6 +72,7 @@ function Pokedex() {
                 <div className='slant-container'></div>
             </div>
             <div className='right-container-inside '>
+                <div className='white-box'></div>
                 <InfoScreen pokemonId={count}/>
             </div>
         </div>
